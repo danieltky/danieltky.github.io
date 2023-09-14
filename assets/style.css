@@ -170,3 +170,61 @@
     width: 680px;
     margin: 10px 0 0 17px;
   }
+
+  .lower-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 100px;
+  }
+
+  .project-card {
+    user-select: none;
+    border: 1px solid #ffffff22;
+    background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, 0.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 0.7rem;
+    backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: 0.5s all;
+    min-height: 437px;
+  }
+
+  .project-card .project-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .project-card h2 {
+    margin: 30px 0 20px 0;
+    color: #ffffff;
+    line-height: 20px;
+  }
+
+  .project-card::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #ffffff08;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+  }
+
+  .project-card:hover {
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.015);
+    filter: brightness(1.0);
+  }
+
+  .project-card:hover::before {
+    filter: brightness(0.5);
+    top: -100%;
+    left: 200%;
+  }
