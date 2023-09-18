@@ -120,7 +120,57 @@
   }
 
   /* ------------------------------------------------------------------------------------ footer -------------------------------------------------------------------------------------- */
+  :root {
+  --footer-background: #121a29;
+  --text-gray: #FEFEFE;
+  }
 
+  footer {
+    position: relative;
+    background-color: var(--footer-background);
+    min-width: 300px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    background: var(--footer-background);
+    flex-direction: column;
+    max-width: 1320px;
+  }
+
+  .footer-line {
+    display: block;
+    width: 100%;
+    height: 0;
+    background-color: var(--text-gray);
+  }
+
+  .footer-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    flex: 2 0 90px;
+    width: 100%;
+    gap: 16px;
+    padding: 24px 8px 16px 8px;
+    margin: 0 auto;
+    color: var(--text-gray);
+  }
+
+  .footer-sec > section {
+    min-width: 150px;
+  }
+
+  .footer-sec > section > small {
+    font-size: 16px;
+    margin: 0 4px;
+  }
 
   /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
   /* ------------------------------------------------------------------------------------ INDEX -------------------------------------------------------------------------------------- */
@@ -172,12 +222,17 @@
   }
 
   .lower-section {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+  }
+
+  .project-section  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    padding: 100px;
   }
 
   .project-card {
@@ -292,4 +347,14 @@
     font-family: "MockFlowFont";   
     display: -webkit-box;
     overflow: hidden;
+  }
+  
+  .future-project-line {
+    display: flex;
+    justify-content: center;
+    margin: 90px 0;
+  }
+
+  .lower-section > .future-project-line > h3 {
+    color: #ffffff;
   }
