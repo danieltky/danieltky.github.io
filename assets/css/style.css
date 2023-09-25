@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 3px solid rgba(135, 135, 135, 0.106) !important; */
+    outline: 3px solid rgba(135, 135, 135, 0.106) !important;
   }
   
   body {
@@ -222,7 +222,7 @@
     margin: 10px 0 0 17px;
   }
 
-  main.content-wrapper .content .upper-section .contact-wrapper .direct-contact-container hr {
+  main.content-wrapper .content .upper-section .contact-wrapper .direct-contact-sec hr {
     color: #FFFFFF;
     opacity: 10%;
     width: 100%;
@@ -381,7 +381,7 @@
     /* max-width: 840px; */
   }
 
-  .form-field-wrapper {
+  .contact-form {
     display: flex;
     flex-direction: column;
     width: 630px;
@@ -389,9 +389,22 @@
     font-weight: 400;
   }
   
-  .form-control, 
-  textarea {
+  .contact-input {
     /* max-width: 400px; */
+    height:50px;
+    border-radius: 4px;
+    border-color: #ffffff24;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .contact-textarea {
+    /* max-width: 400px; */
+    height:150px;
+    resize:none;
     border-radius: 4px;
     border-color: #ffffff24;
     margin-bottom: 15px;
@@ -401,21 +414,12 @@
     letter-spacing: 1px;
   }
 
-  .form-control:focus {
+  .contact-input:focus, .contact-textarea:focus {
     background-color: #000;
     color: #FFFFFF;
   }
-
-  .form-email {
-    height:50px;
-  }
-
-  .form-message {
-    height:150px;
-    resize:none;
-  }
   
-  .send-button {
+  .contact-send-button {
     margin-top: 15px;
     height: 34px;
     width: 400px;
@@ -423,19 +427,195 @@
     transition: all .2s ease-in-out;
   }
   
-  .alt-send-button {
+  .send-button-inner {
     width: 400px;
     height: 34px;
+    padding-top: 7px;
     transition: all .2s ease-in-out;
   }
   
-  .send-text {
+  .send-button-text {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     font: 700 12px 'Lato', sans-serif;
     letter-spacing: 2px;
   }
   
-  .alt-send-button:hover {
+  .send-button-inner:hover {
     transform: translate3d(0px, -29px, 0px);
+    cursor: pointer;
+  }
+  
+  /* Begin Right Contact Page */
+  .direct-contact-sec {
+    width: 300px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: #aaa;
+  }
+  
+  .contact-info-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+  }
+  
+  .contact-info-text a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+
+  .contact-location {
+    margin-left: 35px;
+  }
+  
+  .contact-phone {
+    margin-left: 28px;
+  }
+  
+  .contact-email {
+    margin-left: 21px;
+  }
+  
+  .contact-info-text a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+    text-align: center;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 20px;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }
+  
+  /* Begin Media Queries*/
+  @media screen and (max-width: 850px) {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .direct-contact-container {
+      margin: 0 auto;
+    }  
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 300px;
+    }    
+    .social-media-list li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .social-media-list li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 569px) {
+  
+    .direct-contact-container, .form-wrapper {
+      float: none;
+      margin: 0 auto;
+    }  
+    .contact-input, .contact-textarea {
+      
+      margin: 0 auto;
+    }
+   
+    
+    .name, .email, textarea {
+      width: 280px;
+    } 
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 280px;
+    }  
+    .social-media-list {
+      left: 0;
+    }
+    .social-media-list li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .social-media-list li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 410px) {
+    .send-button {
+      width: 99%;
+    }
   }
