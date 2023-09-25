@@ -6,6 +6,8 @@
 		<title>Portfolio</title>
 
 		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
 		<script src="./assets/js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -45,12 +47,24 @@
 					</div>
 				</div>
 			</header>
+			<main class="content-wrapper">
+				<div class="content">
+					<div class="upper-section">
+						<h1 class="main-title">Contact Me</h1>
+						<div class="contact-wrapper">
+							<form id="contact-form" class="form-field-wrapper" action="https://formspree.io/f/mgejnqdj" method="POST">
+								<input type="email" name="email" class="form-control form-email" id="email" placeholder="Email" required>
+								<textarea name="message" class="form-control form-message" rows="10" placeholder="Message" required></textarea>
+								<button type="submit" class="send-button" id="submit">
+									<div class="alt-send-button">
+										<i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+									</div>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
 		</div>
-	
-	<script>
-		$(document).ready(function() { 
-			
-		});
-	</script>
 	</body>
 </html>
