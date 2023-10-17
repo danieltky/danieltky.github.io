@@ -1,2 +1,2 @@
 
-document.getElementById("year").innerHTML = new Date().getFullYear();
+const swup = new Swup();
