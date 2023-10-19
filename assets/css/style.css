@@ -411,7 +411,6 @@
   .experience-timeline {
     margin: 0;
     padding: 0;
-    border-left: 2px solid #ffffff;
   }
 
   .experience-section .sub-title  {
@@ -429,10 +428,15 @@
   }
 
   .timeline-split .timeline-info,
+  .timeline-split .timeline-marker,
   .timeline-split .timeline-content,
   .timeline-split .period .timeline-info {
     display: table-cell;
     vertical-align: top;
+  }
+
+  .timeline-split .timeline-marker {
+    position: relative;
   }
 
   .timeline-split .timeline-content {
@@ -486,6 +490,49 @@
     margin: 0 0 .5em 0;
     text-transform: uppercase;
     white-space: nowrap;
+  }
+
+  /* Timeline Marker */
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+  }
+
+  .timeline-marker:before {
+    background: #FF6B6B;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    width: 15px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  }
+
+  .timeline-marker:after {
+    content: "";
+    width: 3px;
+    background: #CCD5DB;
+    display: block;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 6px;
+  }
+
+  .timeline-item:last-child .timeline-marker:after {
+    content: none;
+  }
+
+  .timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid #FF6B6B;
   }
 
   /* Timeline Content */
