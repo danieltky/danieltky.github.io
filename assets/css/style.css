@@ -402,6 +402,113 @@
     line-height: 140px;
   }
 
+  .experience-section {
+    color: #c7c5c5;
+    padding: 0 315px 0 315px;
+    margin-bottom: 100px;
+  }
+
+  .experience-timeline {
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #ffffff;
+  }
+
+  .experience-section .sub-title  {
+    text-align: left;
+  }
+
+  /* Split Timeline */
+  .timeline-split {
+    display: table;
+  }
+
+  .timeline-split .timeline-item {
+    display: table-row;
+    padding: 0;
+  }
+
+  .timeline-split .timeline-info,
+  .timeline-split .timeline-content,
+  .timeline-split .period .timeline-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .timeline-split .timeline-content {
+    padding-left: 30px;
+  }
+
+  .timeline-split .timeline-info {
+    padding-right: 30px;
+  }
+
+  .timeline-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .timeline-split .period .timeline-title {
+    position: relative;
+    left: -45px;
+  }
+
+  /* General Styles */
+  .timeline {
+    line-height: 1.4em;
+    list-style: none;
+  }
+
+  .timeline h1,
+  .timeline h2,
+  .timeline h3,
+  .timeline h4,
+  .timeline h5,
+  .timeline h6 {
+    line-height: inherit;
+  }
+
+  /* Timeline Item */
+  .timeline-item {
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Timeline Info */
+  .timeline-info {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 .5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* Timeline Content */
+  .timeline-content {
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .timeline-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-item .timeline-content .timeline-title span {
+    position: absolute;
+    right: 0;
+    font-size: 13px;
+  }
+
   /* Skills Section */
   .skillset-section {
     margin-bottom: 100px;
