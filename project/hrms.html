@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+		<link href='https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css' rel='stylesheet' type='text/css'>
 		<script src="https://unpkg.com/swup@4"></script>
 		<script src="./assets/js/main.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -51,45 +52,18 @@
 			<main id="swup" class="content-wrapper transition-fade">
 				<div class="content">
 					<div class="upper-section">
-						<h1 class="main-title">HELLO,</h1>
-						<h1 class="main-title">I'M DANIEL TAN</h1>
-						<p style="letter-spacing: 3px;">A Front-end Web Developer</p>
-						<hr>
-					</div>
-					<div class="lower-section">
-						<h1 class="sub-title">My Projects</h1>
-						<div class="project-section">
-							<div class="project-card">
-								<a href="project/hrms.html">
-									<div class='project-main'>
-										<img class='project-image' src="assets/img/duck1.jpg" alt="Project" />
-										<div class="card-overlay">
-											<div class="card-header">
-												<div class="card-header-text">
-													<h3 class="card-title">Human Resources Management System</h3>
-													<span class="card-tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eum quos ipsam iste, sapiente accusamus?</span>
-												</div>
-											</div>
-											<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-										</div>
-									</div>
-								</a>
+						<h1 class="main-title">Human Resources Management System</h1>
+						<div class="project-details">
+							<div class="project-description">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum magnam autem enim quod nobis earum explicabo, asperiores rerum tempore impedit quos minima beatae unde, iure omnis modi quo dignissimos cupiditate sapiente labore excepturi repellendus velit expedita.
+									 Voluptatem molestiae facilis libero.</p>
 							</div>
-							<div class="project-card">
-								<a href="#">
-									<div class='project-main'>
-										<img class='project-image' src="assets/img/duck1.jpg" alt="Project" />
-										<div class="card-overlay">
-											<div class="card-header">
-												<div class="card-header-text">
-													<h3 class="card-title">- More Projects Coming Soon -</h3>
-													<span class="card-tagline"></span>            
-												</div>
-											</div>
-											<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-										</div>
-									</div>
-								</a>
+							<div class="project-technology">
+								<ul class="project-technology-list">
+									<li class="project-technology-item">HTML</li>
+									<li class="project-technology-item">CSS</li>
+									<li class="project-technology-item">JavaSript</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -105,7 +79,6 @@
 				</div>
 			</footer>
 		</div>
-
 		<script>
 			$(document).ready(function() {
 				document.getElementById("year").innerHTML = new Date().getFullYear();
