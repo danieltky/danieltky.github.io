@@ -271,21 +271,26 @@
 
   .project-card {
     user-select: none;
-    border: 1px solid #ffffff22;
     background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, 0.5) 100%);
     box-shadow: 0 7px 20px 5px #00000088;
     border-radius: 0.7rem;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(10px);
     overflow: hidden;
     transition: 0.5s all;
-    min-height: 437px;
+    min-height: 300px;
   }
 
   .project-card .project-main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1rem;
+    height: 100%;
+  }
+  .project-card .project-main .project-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.25s ease;
   }
   
   .project-card h2 {
@@ -306,51 +311,47 @@
   }
 
   .project-card:hover {
-    border: 1px solid #ffffff44;
     box-shadow: 0 7px 50px 10px #000000aa;
     transform: scale(1.015);
-    filter: brightness(1.0);
   }
 
   .project-card:hover::before {
-    filter: brightness(0.5);
     top: -100%;
     left: 200%;
+  }
+  
+  .project-card:hover .project-main .project-image{
+    transform: scale(1.1);
   }
 
   .card-overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 100%;
     right: 0;
     z-index: 1;
-    min-height: 400px;
-    background: rgb(41, 49, 58);
+    min-height: 100%;
+    width: 100%;
     transform: translateY(100%);
-    transition: .5s ease-in-out;
-    /* opacity: 97%; */
+    transition: .25s ease;
   }
   
   .project-card:hover .card-overlay {
-    transform: translateY(0);
+    left: 0;
   }
   
   .card-header {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2em;
-    padding: 2em;
-    border-radius: calc(40 * 1px) 0 0 0;    
-    background: linear-gradient(to bottom, rgb(20, 32, 45), rgb(41, 49, 58));
+    padding: 20px;
+    background: #393939e2;
     transform: translateY(-100%);
-    transition: .7s ease-in-out;
-    /* opacity: 97%; */
+    transition: .25s ease-in-out;
   }
 
   .project-card:hover .card-header {
-    transform: translateY(0);
-    border-radius: 0;   
+    border-radius: 0;
   }
   
   .card-thumb {
@@ -364,23 +365,6 @@
     font-size: 1em;
     margin: 0 0 .3em;
     color: #ffffff;
-  }
-  
-  .card-tagline {
-    display: block;
-    margin: 1em 0;
-    font-family: "MockFlowFont";  
-    font-size: .8em; 
-    color: #ffffff;  
-  }
-  
-  .card-description {
-    padding: 0 2em 2em;
-    margin: 0;
-    color: #ffffff;
-    font-family: "MockFlowFont";   
-    display: -webkit-box;
-    overflow: hidden;
   }
 
   /* ------------------------------------------------------------------------------------ project ------------------------------------------------------------------------------------ */
@@ -398,6 +382,16 @@
   .project-technology {
     width: 40%;
     padding: 0 70px;
+  }
+
+  .project-technology-list-wrap {
+    background:
+      conic-gradient(from 90deg at top 2px left 2px, #0000 25%,#ffffff 0) 0 0,
+      conic-gradient(from 180deg at top 2px right 2px, #0000 25%,#ffffff 0) 100% 0;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    cursor: default;
+    padding: 20px;
   }
 
   .project-technology .project-technology-list {
@@ -733,7 +727,7 @@
     width: 300px;
   }
   
-  /* Location, Phone, Email Section */
+  /* Location, Email Section */
   .contact-list {
     list-style-type: none;
   }
