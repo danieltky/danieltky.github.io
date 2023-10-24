@@ -18,25 +18,12 @@
     padding: 0;
   }
 
+  main {
+    animation-duration: 1s; 
+  }
+
   p {
     line-height: 2;
-  }
-
-  .transition-fade {
-    opacity: 1;
-    transition: 350ms;
-    transform: translateY(0);
-    transform-origin: top;
-  }
-
-  html.is-animating .transition-fade {
-    opacity: 1;
-    transform: translateY(100%);
-  }
-
-  html.is-leaving .transition-fade {
-    opacity: 0;
-    transform: translateY(0);
   }
 
   /* ------------------------------------------------------------------------------------ header -------------------------------------------------------------------------------------- */
@@ -651,6 +638,10 @@
   /* ------------------------------------------------------------------------------------ CONTACT -------------------------------------------------------------------------------------- */
   /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
   /* ------------------------------------------------------------------------------------ main --------------------------------------------------------------------------------------- */
+  .contact-section .main-title  {
+    line-height: 140px;
+  }
+  
   .contact-wrapper {
     display: flex;
     flex-direction: row;
@@ -736,6 +727,10 @@
     line-height: 4;
     color: #aaa;
   }
+
+  .direct-contact-sec .contact-list .list-item i.fa-location-dot::before {
+    padding-left: 4px;
+  }
   
   .contact-info-text {
     font: 300 18px 'Lato', sans-serif;
@@ -754,7 +749,7 @@
   }
   
   .contact-email {
-    margin-left: 21px;
+    margin-left: 31px;
   }
   
   .contact-info-text a:hover {
